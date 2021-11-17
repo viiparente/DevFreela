@@ -10,7 +10,6 @@ C:\PROJETOS\ASP.NET Core\DevFreela\DevFreela.API\bin\Debug\net6.0\Microsoft.Open
 C:\PROJETOS\ASP.NET Core\DevFreela\DevFreela.API\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\PROJETOS\ASP.NET Core\DevFreela\DevFreela.API\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\PROJETOS\ASP.NET Core\DevFreela\DevFreela.API\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-C:\PROJETOS\ASP.NET Core\DevFreela\DevFreela.API\obj\Debug\net6.0\DevFreela.API.GlobalUsings.g.cs
 C:\PROJETOS\ASP.NET Core\DevFreela\DevFreela.API\obj\Debug\net6.0\DevFreela.API.csproj.AssemblyReference.cache
 C:\PROJETOS\ASP.NET Core\DevFreela\DevFreela.API\obj\Debug\net6.0\DevFreela.API.GeneratedMSBuildEditorConfig.editorconfig
 C:\PROJETOS\ASP.NET Core\DevFreela\DevFreela.API\obj\Debug\net6.0\DevFreela.API.AssemblyInfoInputs.cache

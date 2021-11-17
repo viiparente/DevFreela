@@ -28,7 +28,7 @@ namespace DevFreela.API.Controllers
             return Ok();
         }
 
-        //Requisição via corpo [FromBody]
+        //Requisição via corpo da requisição [FromBody]
         [HttpPost]
         public IActionResult Post([FromBody] CreateProjectModel createProject)
         {
@@ -42,6 +42,7 @@ namespace DevFreela.API.Controllers
             return CreatedAtAction(nameof(GetById), new { id = createProject.Id }, createProject);
         }
 
+        //Requisição via parametro e via corpo
         // api/projects/2
         [HttpPut("{id}")]
         public IActionResult Put(int id, [FromBody] UpdateProjectModel updateProject)
@@ -66,5 +67,27 @@ namespace DevFreela.API.Controllers
 
             return NoContent();
         }
+
+        // api/projects/1/comments (REQUISIÇÃO POST)
+        [HttpPost("{id}/comments")]
+        public IActionResult PostComment(int id, [FromBody] CreateCommentModel createComment)
+        {
+            return NoContent();
+        }
+
+        // api/projects/1/start
+        [HttpPut("{id}/start")]
+        public IActionResult Start(int id)
+        {
+            return NoContent();
+        }
+
+        // api/projects/1/finish
+        [HttpPut("{id}/finish")]
+        public IActionResult Finish(int id)
+        {
+            return NoContent();
+        }
+
     }
 }
