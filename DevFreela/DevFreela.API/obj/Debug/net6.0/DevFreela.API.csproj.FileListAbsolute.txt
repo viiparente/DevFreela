@@ -25,3 +25,14 @@ C:\PROJETOS\ASP.NET Core\DevFreela\DevFreela.API\obj\Debug\net6.0\DevFreela.API.
 C:\PROJETOS\ASP.NET Core\DevFreela\DevFreela.API\obj\Debug\net6.0\ref\DevFreela.API.dll
 C:\PROJETOS\ASP.NET Core\DevFreela\DevFreela.API\obj\Debug\net6.0\DevFreela.API.pdb
 C:\PROJETOS\ASP.NET Core\DevFreela\DevFreela.API\obj\Debug\net6.0\DevFreela.API.genruntimeconfig.cache
+C:\PROJETOS\ASP.NET Core\DevFreela\DevFreela.API\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\PROJETOS\ASP.NET Core\DevFreela\DevFreela.API\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\PROJETOS\ASP.NET Core\DevFreela\DevFreela.API\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\PROJETOS\ASP.NET Core\DevFreela\DevFreela.API\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\PROJETOS\ASP.NET Core\DevFreela\DevFreela.API\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\PROJETOS\ASP.NET Core\DevFreela\DevFreela.API\bin\Debug\net6.0\System.Windows.Extensions.dll
+C:\PROJETOS\ASP.NET Core\DevFreela\DevFreela.API\bin\Debug\net6.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\PROJETOS\ASP.NET Core\DevFreela\DevFreela.API\bin\Debug\net6.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\PROJETOS\ASP.NET Core\DevFreela\DevFreela.API\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\PROJETOS\ASP.NET Core\DevFreela\DevFreela.API\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\PROJETOS\ASP.NET Core\DevFreela\DevFreela.API\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
