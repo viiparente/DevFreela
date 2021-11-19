@@ -8,8 +8,9 @@ namespace DevFreela.API.Controllers
     public class ProjectsController : ControllerBase
     {
         private readonly OpeningTimeOption _option;
-        public ProjectsController(IOptions<OpeningTimeOption> option)
+        public ProjectsController(IOptions<OpeningTimeOption> option, ExampleClass exampleClass)
         {
+            exampleClass.Name = "Updated at ProjectController";
             _option = option.Value;
         }
         // Aqui está utilizando a requisiçao via  parâmetro /api/projects e a ?query= o nome que deseja
