@@ -1,9 +1,5 @@
 ﻿using DevFreela.Core.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace DevFreela.Infrastructure.Persistence
 {
@@ -26,7 +22,7 @@ namespace DevFreela.Infrastructure.Persistence
                 new User("Francisco Parente","fparente1@hotmail.com", new DateTime(1900, 12, 33)),
             };
 
-            Skill = new List<Skill>
+            Skills = new List<Skill>
             {
                 new Skill("ASPNET Core"),
                 new Skill("Java"),
@@ -37,6 +33,9 @@ namespace DevFreela.Infrastructure.Persistence
 
         public List<User> Users { get; set; }
 
-        public List<Skill> Skill { get; set; }
+        public List<Skill> Skills { get; set; }
+
+        public List<ProjectComment> ProjectComments { get; set; }
     }
+
 }

@@ -10,3 +10,8 @@ C:\PROJETOS\ASP.NET Core\DevFreela\DevFreela.Application\obj\Debug\net6.0\DevFre
 C:\PROJETOS\ASP.NET Core\DevFreela\DevFreela.Application\obj\Debug\net6.0\DevFreela.Application.dll
 C:\PROJETOS\ASP.NET Core\DevFreela\DevFreela.Application\obj\Debug\net6.0\ref\DevFreela.Application.dll
 C:\PROJETOS\ASP.NET Core\DevFreela\DevFreela.Application\obj\Debug\net6.0\DevFreela.Application.pdb
+C:\PROJETOS\ASP.NET Core\DevFreela\DevFreela.Application\bin\Debug\net6.0\DevFreela.Core.dll
+C:\PROJETOS\ASP.NET Core\DevFreela\DevFreela.Application\bin\Debug\net6.0\DevFreela.Infrastructure.dll
+C:\PROJETOS\ASP.NET Core\DevFreela\DevFreela.Application\bin\Debug\net6.0\DevFreela.Core.pdb
+C:\PROJETOS\ASP.NET Core\DevFreela\DevFreela.Application\bin\Debug\net6.0\DevFreela.Infrastructure.pdb
+C:\PROJETOS\ASP.NET Core\DevFreela\DevFreela.Application\obj\Debug\net6.0\DevFreela.Application.csproj.CopyComplete
