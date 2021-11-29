@@ -20,7 +20,12 @@
       "ProjectGuid": "76848980-729e-461e-b381-bb9b292451cc",
       "DisplayName": "DevFreela.Infrastructure",
       "ColorIndex": 2
+    },
+    "0c25d0d2-4f73-4b66-89af-e97467fbb0a7": {
+      "ProjectGuid": "0c25d0d2-4f73-4b66-89af-e97467fbb0a7",
+      "DisplayName": "DevFreela.Application",
+      "ColorIndex": 3
     }
   },
-  "NextColorIndex": 3
+  "NextColorIndex": 4
 }

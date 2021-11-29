@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DevFreela.Application.InputModels
 {
-    public class UpdateInputModel
+    public class UpdateProjectInputModel
     {
         public int Id { get; set; }  
         public string Title { get; set; }

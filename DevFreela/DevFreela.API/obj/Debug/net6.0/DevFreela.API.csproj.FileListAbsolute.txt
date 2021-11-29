@@ -38,3 +38,7 @@ C:\PROJETOS\ASP.NET Core\DevFreela\DevFreela.API\bin\Debug\net6.0\runtimes\win\l
 C:\PROJETOS\ASP.NET Core\DevFreela\DevFreela.API\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\PROJETOS\ASP.NET Core\DevFreela\DevFreela.API\bin\Debug\net6.0\DevFreela.Core.dll
 C:\PROJETOS\ASP.NET Core\DevFreela\DevFreela.API\bin\Debug\net6.0\DevFreela.Core.pdb
+C:\PROJETOS\ASP.NET Core\DevFreela\DevFreela.API\bin\Debug\net6.0\DevFreela.Application.dll
+C:\PROJETOS\ASP.NET Core\DevFreela\DevFreela.API\bin\Debug\net6.0\DevFreela.Infrastructure.dll
+C:\PROJETOS\ASP.NET Core\DevFreela\DevFreela.API\bin\Debug\net6.0\DevFreela.Application.pdb
+C:\PROJETOS\ASP.NET Core\DevFreela\DevFreela.API\bin\Debug\net6.0\DevFreela.Infrastructure.pdb

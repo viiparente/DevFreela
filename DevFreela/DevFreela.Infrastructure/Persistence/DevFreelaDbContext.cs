@@ -17,9 +17,9 @@ namespace DevFreela.Infrastructure.Persistence
 
             Users = new List<User>
             {
-                new User("Vinicius Parente","vd.parente@hotmail.com", new DateTime(1900, 03, 22)),
-                new User("João Parente","joao.parente@hotmail.com", new DateTime(1900, 12, 11)),
-                new User("Francisco Parente","fparente1@hotmail.com", new DateTime(1900, 12, 33)),
+                new User("Vinicius Parente","vd.parente@hotmail.com", new DateTime(1996, 3, 22)),
+                new User("João Parente","joao.parente@hotmail.com", new DateTime(1995, 12, 11)),
+                new User("Francisco Parente","fparente1@hotmail.com", new DateTime(1930, 12, 23))
             };
 
             Skills = new List<Skill>

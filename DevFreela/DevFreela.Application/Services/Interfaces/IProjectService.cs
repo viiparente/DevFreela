@@ -16,7 +16,7 @@ namespace DevFreela.Application.Services.Interfaces
 
         int Create(NewProjectInputModel inputModel);
 
-        void Update(UpdateInputModel inputModel);
+        void Update(UpdateProjectInputModel inputModel);
 
         void Delete(int id);
 
