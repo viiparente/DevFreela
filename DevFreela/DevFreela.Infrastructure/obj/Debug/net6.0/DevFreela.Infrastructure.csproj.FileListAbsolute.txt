@@ -13,3 +13,5 @@ C:\PROJETOS\ASP.NET Core\DevFreela\DevFreela.Infrastructure\obj\Debug\net6.0\Dev
 C:\PROJETOS\ASP.NET Core\DevFreela\DevFreela.Infrastructure\obj\Debug\net6.0\DevFreela.Infrastructure.dll
 C:\PROJETOS\ASP.NET Core\DevFreela\DevFreela.Infrastructure\obj\Debug\net6.0\ref\DevFreela.Infrastructure.dll
 C:\PROJETOS\ASP.NET Core\DevFreela\DevFreela.Infrastructure\obj\Debug\net6.0\DevFreela.Infrastructure.pdb
+C:\PROJETOS\ASP.NET Core\DevFreela\DevFreela.Infrastructure\bin\Debug\net6.0\DevFreela.Infrastructure.runtimeconfig.json
+C:\PROJETOS\ASP.NET Core\DevFreela\DevFreela.Infrastructure\obj\Debug\net6.0\DevFreela.Infrastructure.genruntimeconfig.cache
