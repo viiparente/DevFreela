@@ -17,5 +17,7 @@ namespace DevFreela.Core.Entities
         public int IdUser { get; private set; }
 
         public int IdSkill { get; private set; }
+
+        public Skill Skill { get; set; }
     }
 }
