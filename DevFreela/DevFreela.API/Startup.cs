@@ -2,6 +2,7 @@
 using DevFreela.Application.Services.Implementations;
 using DevFreela.Application.Services.Interfaces;
 using DevFreela.Infrastructure.Persistence;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 
 namespace DevFreela.API
@@ -18,9 +19,19 @@ namespace DevFreela.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddSingleton<DevFreelaDbContext>();
+            
+            var connectionString = Configuration.GetConnectionString(Configuration.GetConnectionString("DevFreelaCs"));
+           
+            services.AddDbContext<DevFreelaDbContext>(options => options.UseSqlServer(connectionString));
+
+
+            //services.AddSingleton<DevFreelaDbContext>();
+
 
             services.AddScoped<IProjectService, ProjectService>();
+            services.AddScoped<IUserService, UserService>();
+            services.AddScoped<ISkillService, SkillService>();
+
 
             //Uma instância por aplicação
             //services.AddSingleton<ExampleClass>(e => new ExampleClass { Name = "Initial Stag"});

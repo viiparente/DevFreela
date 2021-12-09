@@ -1,7 +1,7 @@
 # DevFreela
 DevFreela é uma aplicação construída na plataforma .NET com o objetivo de possibilitar clientes a contratarem desenvolvedores freelancers para o desenvolvimento de projetos com base nas habilidades profissionais do desenvolvedor, sendo possível também enviar comentários a respeito do projeto, tanto como freelancer quanto como cliente.
 
-O curso "Formação ASP.NET Core" foi idealizado e ministrado pelo instrutor [Luis Felipe](https://www.linkedin.com/in/luisdeol/).
+O curso "Formação ASP.NET Core" foi idealizado e ministrado pelo instrutor [Luis Felipe](https://www.linkedin.com/in/luisdeol/) com ajuda do README do **@LecioVilela**.
 
 O objetivo deste projeto é, aperfeiçoar o framework, construindo uma **API REST**, utilizamos vários recursos como:
 
