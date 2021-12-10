@@ -19,11 +19,14 @@ namespace DevFreela.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            
-            var connectionString = Configuration.GetConnectionString(Configuration.GetConnectionString("DevFreelaCs"));
-           
+            services.Configure<OpeningTimeOption>(Configuration.GetSection("OpeningTime"));
+
+            // var connectionString = Configuration.GetConnectionString(Configuration.GetConnectionString("DevFreelaCs")) ;
+            var connectionString = Configuration["ConnectionStrings:DevFreelaCs"];
             services.AddDbContext<DevFreelaDbContext>(options => options.UseSqlServer(connectionString));
 
+
+            //services.AddDbContext<DevFreelaDbContext>(options => options.UseInMemoryDatabase("Devfreela"));
 
             //services.AddSingleton<DevFreelaDbContext>();
 
@@ -42,7 +45,6 @@ namespace DevFreela.API
             //Uma instância por Classe
             //services.AddTransient<ExampleClass>(e => new ExampleClass { Name = "Initial Stag" });
 
-            services.Configure<OpeningTimeOption>(Configuration.GetSection("OpeningTime"));
 
             services.AddControllers();  
             services.AddSwaggerGen(c =>

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DevFreela.Infrastructure.Persistence.Migrations
 {
     [DbContext(typeof(DevFreelaDbContext))]
-    [Migration("20211209004024_FirstMigration")]
-    partial class FirstMigration
+    [Migration("20211209014105_InitialMigration")]
+    partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
