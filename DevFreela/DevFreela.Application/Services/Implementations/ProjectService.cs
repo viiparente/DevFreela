@@ -19,6 +19,7 @@ namespace DevFreela.Application.Services.Implementations
             var project = new Project(inputModel.Title, inputModel.Description,inputModel.IdClient,inputModel.IdFreelancer, inputModel.TotalCost);
         
             _dbContext.Projects.Add(project);
+            _dbContext.SaveChanges();
 
             return project.Id;
         }
@@ -28,6 +29,7 @@ namespace DevFreela.Application.Services.Implementations
             var comment = new ProjectComment(inputModel.Content, inputModel.IdProject, inputModel.IdUser);
 
             _dbContext.ProjectComments.Add(comment);
+            _dbContext.SaveChanges();
 
         }
 
@@ -39,7 +41,8 @@ namespace DevFreela.Application.Services.Implementations
             project.Cancel();
 #pragma warning restore CS8602 // Desreferência de uma referência possivelmente nula.
 
-             // _dbContext.Projects.Remove(project);
+            _dbContext.SaveChanges();
+            // _dbContext.Projects.Remove(project);
         }
 
         public void Finish(int id)
@@ -49,7 +52,7 @@ namespace DevFreela.Application.Services.Implementations
 #pragma warning disable CS8602 // Desreferência de uma referência possivelmente nula.
             project.Finish();
 #pragma warning restore CS8602 // Desreferência de uma referência possivelmente nula.
-
+            _dbContext.SaveChanges();
         }
 
         public List<ProjectViewModel> GetAll(string query)
@@ -88,6 +91,7 @@ namespace DevFreela.Application.Services.Implementations
             var project = _dbContext.Projects.SingleOrDefault(p => p.Id == id);
 
             project.Start();
+            _dbContext.SaveChanges();
         }
          
         public void Update(UpdateProjectInputModel inputModel)
@@ -95,7 +99,7 @@ namespace DevFreela.Application.Services.Implementations
             var project = _dbContext.Projects.SingleOrDefault(p => p.Id == inputModel.Id);
 
             project.Update(inputModel.Title, inputModel.Description, inputModel.TotalCost); //aqui usaria o save no banco
-
+            _dbContext.SaveChanges();
         }
     }
 }
