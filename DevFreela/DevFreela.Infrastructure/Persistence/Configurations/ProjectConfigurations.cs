@@ -3,9 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace DevFreela.Infrastructure.Persistence.Configurations
 {
@@ -16,7 +14,6 @@ namespace DevFreela.Infrastructure.Persistence.Configurations
             builder
                 .HasKey(p => p.Id);
 
-            //um freelancer tem muitos projetos e tem uma chave estrangeria.
             builder
                 .HasOne(p => p.Freelancer)
                 .WithMany(f => f.FreelanceProjects)
@@ -24,10 +21,10 @@ namespace DevFreela.Infrastructure.Persistence.Configurations
                 .OnDelete(DeleteBehavior.Restrict);
 
             builder
-               .HasOne(p => p.Client)
-               .WithMany(f => f.OwnedProjects)
-               .HasForeignKey(p => p.IdClient)
-               .OnDelete(DeleteBehavior.Restrict);
+                .HasOne(p => p.Client)
+                .WithMany(f => f.OwnedProjects)
+                .HasForeignKey(p => p.IdClient)
+                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

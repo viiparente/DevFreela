@@ -10,12 +10,10 @@ namespace DevFreela.Infrastructure.Persistence
         {
             
         }
+
         public DbSet<Project> Projects { get; set; }
-
         public DbSet<User> Users { get; set; }
-
         public DbSet<Skill> Skills { get; set; }
-
         public DbSet<UserSkill> UserSkills { get; set; }
         public DbSet<ProjectComment> ProjectComments { get; set; }
 
@@ -24,5 +22,4 @@ namespace DevFreela.Infrastructure.Persistence
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
         }
     }
-
 }
