@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "nMo2fjuSIkM9h2AI3odez5QMcsd7a4Fv4n6zN/dXQpV9hnNClThB8zUPLlB46oeap33hO/KBejmsYCf5ufFuFg==",
+  "dgSpecHash": "/2/SOi+xo5CjJoV26jYnuEw8HIBtgs7UBjqYmXg6FqeyTFJC4jT3eJZIm+6xPkFSBfxP7kAbob7qVZTPLlbsBA==",
   "success": true,
   "projectFilePath": "C:\\PROJETOS\\ASP.NET Core\\DevFreela\\DevFreela.Infrastructure\\DevFreela.Infrastructure.csproj",
   "expectedPackageFiles": [
@@ -8,10 +8,11 @@
     "C:\\Users\\vdpar\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\vdpar\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\vdpar\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
-    "C:\\Users\\vdpar\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.0\\microsoft.entityframeworkcore.6.0.0.nupkg.sha512",
-    "C:\\Users\\vdpar\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.0\\microsoft.entityframeworkcore.abstractions.6.0.0.nupkg.sha512",
-    "C:\\Users\\vdpar\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\6.0.0\\microsoft.entityframeworkcore.analyzers.6.0.0.nupkg.sha512",
+    "C:\\Users\\vdpar\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.1\\microsoft.entityframeworkcore.6.0.1.nupkg.sha512",
+    "C:\\Users\\vdpar\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.1\\microsoft.entityframeworkcore.abstractions.6.0.1.nupkg.sha512",
+    "C:\\Users\\vdpar\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\6.0.1\\microsoft.entityframeworkcore.analyzers.6.0.1.nupkg.sha512",
     "C:\\Users\\vdpar\\.nuget\\packages\\microsoft.entityframeworkcore.design\\6.0.0\\microsoft.entityframeworkcore.design.6.0.0.nupkg.sha512",
+    "C:\\Users\\vdpar\\.nuget\\packages\\microsoft.entityframeworkcore.inmemory\\6.0.1\\microsoft.entityframeworkcore.inmemory.6.0.1.nupkg.sha512",
     "C:\\Users\\vdpar\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\6.0.0\\microsoft.entityframeworkcore.relational.6.0.0.nupkg.sha512",
     "C:\\Users\\vdpar\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\6.0.0\\microsoft.entityframeworkcore.sqlserver.6.0.0.nupkg.sha512",
     "C:\\Users\\vdpar\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\6.0.0\\microsoft.entityframeworkcore.tools.6.0.0.nupkg.sha512",
