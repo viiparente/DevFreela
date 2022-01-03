@@ -1,7 +1,9 @@
 ﻿using DevFreela.API.Models;
+using DevFreela.Application.Commands.CreateProject;
 using DevFreela.Application.Services.Implementations;
 using DevFreela.Application.Services.Interfaces;
 using DevFreela.Infrastructure.Persistence;
+using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 
@@ -19,7 +21,7 @@ namespace DevFreela.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.Configure<OpeningTimeOption>(Configuration.GetSection("OpeningTime"));
+            //services.Configure<OpeningTimeOption>(Configuration.GetSection("OpeningTime"));
 
             // var connectionString = Configuration.GetConnectionString(Configuration.GetConnectionString("DevFreelaCs")) ;
             var connectionString = Configuration["ConnectionStrings:DevFreelaCs"];
@@ -45,6 +47,7 @@ namespace DevFreela.API
             //Uma instância por Classe
             //services.AddTransient<ExampleClass>(e => new ExampleClass { Name = "Initial Stag" });
 
+            services.AddMediatR(typeof(CreateProjectCommand));
 
             services.AddControllers();  
             services.AddSwaggerGen(c =>
