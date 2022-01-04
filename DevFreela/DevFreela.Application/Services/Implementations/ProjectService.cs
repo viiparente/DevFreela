@@ -21,46 +21,46 @@ namespace DevFreela.Application.Services.Implementations
 
         }
 
-        public int Create(NewProjectInputModel inputModel)
-        {
-            var project = new Project(inputModel.Title, inputModel.Description,inputModel.IdClient,inputModel.IdFreelancer, inputModel.TotalCost);
+        //public int Create(NewProjectInputModel inputModel)
+        //{
+        //    var project = new Project(inputModel.Title, inputModel.Description,inputModel.IdClient,inputModel.IdFreelancer, inputModel.TotalCost);
         
-            _dbContext.Projects.Add(project);
-            _dbContext.SaveChanges();
+        //    _dbContext.Projects.Add(project);
+        //    _dbContext.SaveChanges();
 
-            return project.Id;
-        }
+        //    return project.Id;
+        //}
 
-        public void CreateComment(CreateCommentInputModel inputModel)
-        {
-            var comment = new ProjectComment(inputModel.Content, inputModel.IdProject, inputModel.IdUser);
+        //public void CreateComment(CreateCommentInputModel inputModel)
+        //{
+        //    var comment = new ProjectComment(inputModel.Content, inputModel.IdProject, inputModel.IdUser);
 
-            _dbContext.ProjectComments.Add(comment);
-            _dbContext.SaveChanges();
+        //    _dbContext.ProjectComments.Add(comment);
+        //    _dbContext.SaveChanges();
 
-        }
+        //}
 
-        public void Delete(int id)
-        {
-            var project = _dbContext.Projects.SingleOrDefault(p => p.Id == id);
+//        public void Delete(int id)
+//        {
+//            var project = _dbContext.Projects.SingleOrDefault(p => p.Id == id);
 
-#pragma warning disable CS8602 // Desreferência de uma referência possivelmente nula.
-            project.Cancel();
-#pragma warning restore CS8602 // Desreferência de uma referência possivelmente nula.
+//#pragma warning disable CS8602 // Desreferência de uma referência possivelmente nula.
+//            project.Cancel();
+//#pragma warning restore CS8602 // Desreferência de uma referência possivelmente nula.
 
-            _dbContext.SaveChanges();
-            // _dbContext.Projects.Remove(project);
-        }
+//            _dbContext.SaveChanges();
+//            // _dbContext.Projects.Remove(project);
+//        }
 
-        public void Finish(int id)
-        {
-            var project = _dbContext.Projects.SingleOrDefault(p => p.Id == id);
+//        public void Finish(int id)
+//        {
+//            var project = _dbContext.Projects.SingleOrDefault(p => p.Id == id);
 
-#pragma warning disable CS8602 // Desreferência de uma referência possivelmente nula.
-            project.Finish();
-#pragma warning restore CS8602 // Desreferência de uma referência possivelmente nula.
-            _dbContext.SaveChanges();
-        }
+//#pragma warning disable CS8602 // Desreferência de uma referência possivelmente nula.
+//            project.Finish();
+//#pragma warning restore CS8602 // Desreferência de uma referência possivelmente nula.
+//            _dbContext.SaveChanges();
+//        }
 
         public List<ProjectViewModel> GetAll(string query)
         {
@@ -98,29 +98,29 @@ namespace DevFreela.Application.Services.Implementations
             return projectDetailsViewModel;
         }
 
-        public void Start(int id)
-        {
-            var project = _dbContext.Projects.SingleOrDefault(p => p.Id == id);
+        //public void Start(int id)
+        //{
+        //    var project = _dbContext.Projects.SingleOrDefault(p => p.Id == id);
 
-            project.Start();
-            //_dbContext.SaveChanges();
-            using (var sqlConnection = new SqlConnection(_connectionString))
-            {
-                sqlConnection.Open();
+        //    project.Start();
+        //    //_dbContext.SaveChanges();
+        //    using (var sqlConnection = new SqlConnection(_connectionString))
+        //    {
+        //        sqlConnection.Open();
 
-                var script = "UPDATE Projects SET Status = @status, StartedAt = @startedat WHERE Id = @id";
+        //        var script = "UPDATE Projects SET Status = @status, StartedAt = @startedat WHERE Id = @id";
 
-                sqlConnection.Execute(script, new {status = project.Status, startedat = project.StartedAt, id});
-                // return sqlConnection.Query<SkillViewModel>(script).ToList();
-            }
-        }
+        //        sqlConnection.Execute(script, new {status = project.Status, startedat = project.StartedAt, id});
+        //        // return sqlConnection.Query<SkillViewModel>(script).ToList();
+        //    }
+        //}
          
-        public void Update(UpdateProjectInputModel inputModel)
-        {
-            var project = _dbContext.Projects.SingleOrDefault(p => p.Id == inputModel.Id);
+        //public void Update(UpdateProjectInputModel inputModel)
+        //{
+        //    var project = _dbContext.Projects.SingleOrDefault(p => p.Id == inputModel.Id);
 
-            project.Update(inputModel.Title, inputModel.Description, inputModel.TotalCost); //aqui usaria o save no banco
-            _dbContext.SaveChanges();
-        }
+        //    project.Update(inputModel.Title, inputModel.Description, inputModel.TotalCost); //aqui usaria o save no banco
+        //    _dbContext.SaveChanges();
+        //}
     }
 }
