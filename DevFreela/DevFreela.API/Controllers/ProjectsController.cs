@@ -6,6 +6,8 @@ using DevFreela.Application.Commands.FinishProject;
 using DevFreela.Application.Commands.StartProject;
 using DevFreela.Application.Commands.UpdateProject;
 using DevFreela.Application.InputModels;
+using DevFreela.Application.Queries.GetAllProjects;
+using DevFreela.Application.Queries.GetProjectById;
 using DevFreela.Application.Services.Interfaces;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -26,22 +28,24 @@ namespace DevFreela.API.Controllers
         // Aqui está utilizando a requisiçao via  parâmetro /api/projects e a ?query= o nome que deseja
         // api/projects?query=net core
         [HttpGet]
-        public IActionResult Get(string query)
+        public async Task<IActionResult> Get(string query)
         {
             // Buscar todos ou filtrar
-            var projects = _projectService.GetAll(query);
+            //var projects = _projectService.GetAll(query);
+            var getAllProjectsQuery = new GetAllProjectsQuery(query);
 
+            var projects = await _mediator.Send(getAllProjectsQuery);
             return Ok(projects);
         }
 
         //Requisição via parâmetro 
         // api/projects/2
         [HttpGet("{id}")]
-        public IActionResult GetById(int id)
+        public async Task<IActionResult> GetById(int id)
         {
-            // Buscar o projeto
+            var query = new GetProjectByIdQuery(id);
 
-            var project = _projectService.GetById(id);
+            var project = await _mediator.Send(query);
 
             if (project == null)
             {

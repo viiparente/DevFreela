@@ -1,5 +1,6 @@
 ﻿using DevFreela.API.Models;
 using DevFreela.Application.Commands.CreateUser;
+using DevFreela.Application.Queries.GetUser;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -15,9 +16,18 @@ namespace DevFreela.API.Controllers
         }
         // api/users/1
         [HttpGet("{id}")]
-        public IActionResult GetById(int id)
+        public async Task<IActionResult> GetById(int id)
         {
-            return Ok();
+            var query = new GetUserQuery(id);
+
+            var user = await _mediator.Send(query);
+
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(user);
         }
 
         // api/users

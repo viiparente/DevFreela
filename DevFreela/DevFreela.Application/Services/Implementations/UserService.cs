@@ -13,11 +13,11 @@ namespace DevFreela.Application.Services.Implementations
 {
     public class UserService : IUserService
     {
-        private readonly DevFreelaDbContext _dbContext;
-        public UserService(DevFreelaDbContext dbContext)
-        {
-            _dbContext = dbContext;
-        }
+        //private readonly DevFreelaDbContext _dbContext;
+        //public UserService(DevFreelaDbContext dbContext)
+        //{
+        //    _dbContext = dbContext;
+        //}
         //public int Create(CreateUserInputModel inputModel)
         //{
         //    var user = new User(inputModel.FullName, inputModel.Email, inputModel.BirthDate);
@@ -29,16 +29,16 @@ namespace DevFreela.Application.Services.Implementations
         //    return user.Id;
         //}
 
-        public UserViewModel GetUser(int id)
-        {
-            var user = _dbContext.Users.SingleOrDefault(u => u.Id == id);
+        //public UserViewModel GetUser(int id)
+        //{
+        //    var user = _dbContext.Users.SingleOrDefault(u => u.Id == id);
 
-            if (user == null)
-            {
-                return null;
-            }
+        //    if (user == null)
+        //    {
+        //        return null;
+        //    }
 
-            return new UserViewModel(user.FullName, user.Email);
-        }
+        //    return new UserViewModel(user.FullName, user.Email);
+        //}
     }
 }

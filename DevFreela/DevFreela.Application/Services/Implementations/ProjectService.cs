@@ -62,41 +62,41 @@ namespace DevFreela.Application.Services.Implementations
 //            _dbContext.SaveChanges();
 //        }
 
-        public List<ProjectViewModel> GetAll(string query)
-        {
-            var projects = _dbContext.Projects;
+        //public List<ProjectViewModel> GetAll(string query)
+        //{
+        //    var projects = _dbContext.Projects;
 
-            var projectsViewModel = projects
-                .Select(p => new ProjectViewModel(p.Id, p.Title, p.CreatedAt))
-                .ToList();
+        //    var projectsViewModel = projects
+        //        .Select(p => new ProjectViewModel(p.Id, p.Title, p.CreatedAt))
+        //        .ToList();
 
-            return projectsViewModel;
-        }
+        //    return projectsViewModel;
+        //}
 
-        public ProjectDetailsViewModel GetById(int id)
-        {
-            var project = _dbContext.Projects
-                .Include(p => p.Client)
-                .Include(p => p.Freelancer)
-                .SingleOrDefault(p => p.Id == id);
+        //public ProjectDetailsViewModel GetById(int id)
+        //{
+        //    var project = _dbContext.Projects
+        //        .Include(p => p.Client)
+        //        .Include(p => p.Freelancer)
+        //        .SingleOrDefault(p => p.Id == id);
 
-            if (project == null) 
-            {
-                return null;
-            }
-            var projectDetailsViewModel = new ProjectDetailsViewModel(
-                project.Id,
-                project.Title,
-                project.Description,
-                project.TotalCost,
-                project.StartedAt,
-                project.FinishedAt,
-                project.Client.FullName,
-                project.Freelancer.FullName
-                );
+        //    if (project == null) 
+        //    {
+        //        return null;
+        //    }
+        //    var projectDetailsViewModel = new ProjectDetailsViewModel(
+        //        project.Id,
+        //        project.Title,
+        //        project.Description,
+        //        project.TotalCost,
+        //        project.StartedAt,
+        //        project.FinishedAt,
+        //        project.Client.FullName,
+        //        project.Freelancer.FullName
+        //        );
 
-            return projectDetailsViewModel;
-        }
+        //    return projectDetailsViewModel;
+        //}
 
         //public void Start(int id)
         //{
