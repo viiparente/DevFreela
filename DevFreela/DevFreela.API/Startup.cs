@@ -1,7 +1,4 @@
-﻿using DevFreela.API.Models;
-using DevFreela.Application.Commands.CreateProject;
-using DevFreela.Application.Services.Implementations;
-using DevFreela.Application.Services.Interfaces;
+﻿using DevFreela.Application.Commands.CreateProject;
 using DevFreela.Infrastructure.Persistence;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
@@ -26,15 +23,12 @@ namespace DevFreela.API
             // var connectionString = Configuration.GetConnectionString(Configuration.GetConnectionString("DevFreelaCs")) ;
             var connectionString = Configuration["ConnectionStrings:DevFreelaCs"];
             services.AddDbContext<DevFreelaDbContext>(options => options.UseSqlServer(connectionString));
-
-
             //services.AddDbContext<DevFreelaDbContext>(options => options.UseInMemoryDatabase("Devfreela"));
 
             //services.AddSingleton<DevFreelaDbContext>();
 
-
-            services.AddScoped<IProjectService, ProjectService>();
-            services.AddScoped<IUserService, UserService>();
+            //services.AddScoped<IProjectService, ProjectService>();
+            //services.AddScoped<IUserService, UserService>();
             //services.AddScoped<ISkillService, SkillService>();
 
 
@@ -47,9 +41,10 @@ namespace DevFreela.API
             //Uma instância por Classe
             //services.AddTransient<ExampleClass>(e => new ExampleClass { Name = "Initial Stag" });
 
+            services.AddControllers();  
+
             services.AddMediatR(typeof(CreateProjectCommand));
 
-            services.AddControllers();  
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "DevFreela.API", Version = "v1" });

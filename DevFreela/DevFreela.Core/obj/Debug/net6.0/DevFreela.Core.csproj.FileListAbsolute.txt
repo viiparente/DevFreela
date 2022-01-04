@@ -9,4 +9,3 @@ C:\PROJETOS\ASP.NET Core\DevFreela\DevFreela.Core\obj\Debug\net6.0\DevFreela.Cor
 C:\PROJETOS\ASP.NET Core\DevFreela\DevFreela.Core\obj\Debug\net6.0\DevFreela.Core.dll
 C:\PROJETOS\ASP.NET Core\DevFreela\DevFreela.Core\obj\Debug\net6.0\ref\DevFreela.Core.dll
 C:\PROJETOS\ASP.NET Core\DevFreela\DevFreela.Core\obj\Debug\net6.0\DevFreela.Core.pdb
-C:\PROJETOS\ASP.NET Core\DevFreela\DevFreela.Core\obj\Debug\net6.0\DevFreela.Core.csproj.AssemblyReference.cache

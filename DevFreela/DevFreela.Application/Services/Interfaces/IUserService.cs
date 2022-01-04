@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace DevFreela.Application.Services.Interfaces
 {
-    public interface IUserService
-    {
+    //public interface IUserService
+    //{
         //UserViewModel GetUser(int id);
         //int Create(CreateUserInputModel inputModel);
-    }
+    //}
 }

@@ -11,8 +11,8 @@ using System.Threading.Tasks;
 
 namespace DevFreela.Application.Services.Implementations
 {
-    public class UserService : IUserService
-    {
+    //public class UserService : IUserService
+    //{
         //private readonly DevFreelaDbContext _dbContext;
         //public UserService(DevFreelaDbContext dbContext)
         //{
@@ -40,5 +40,5 @@ namespace DevFreela.Application.Services.Implementations
 
         //    return new UserViewModel(user.FullName, user.Email);
         //}
-    }
+    //}
 }
