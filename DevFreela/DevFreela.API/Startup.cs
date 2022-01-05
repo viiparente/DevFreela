@@ -1,5 +1,7 @@
 ﻿using DevFreela.Application.Commands.CreateProject;
+using DevFreela.Core.Repositories;
 using DevFreela.Infrastructure.Persistence;
+using DevFreela.Infrastructure.Persistence.Repositories;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
@@ -40,6 +42,11 @@ namespace DevFreela.API
 
             //Uma instância por Classe
             //services.AddTransient<ExampleClass>(e => new ExampleClass { Name = "Initial Stag" });
+
+            services.AddScoped<IProjectRepository, ProjectRepository>();
+            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<ISkillRepository, SkillRepository>();
+
 
             services.AddControllers();  
 
