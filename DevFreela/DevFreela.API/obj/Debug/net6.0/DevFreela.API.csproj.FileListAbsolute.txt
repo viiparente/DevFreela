@@ -68,3 +68,6 @@ C:\PROJETOS\ASP.NET Core\DevFreela\DevFreela.API\obj\Debug\net6.0\DevFreela.API.
 C:\PROJETOS\ASP.NET Core\DevFreela\DevFreela.API\obj\Debug\net6.0\ref\DevFreela.API.dll
 C:\PROJETOS\ASP.NET Core\DevFreela\DevFreela.API\obj\Debug\net6.0\DevFreela.API.pdb
 C:\PROJETOS\ASP.NET Core\DevFreela\DevFreela.API\obj\Debug\net6.0\DevFreela.API.genruntimeconfig.cache
+C:\PROJETOS\ASP.NET Core\DevFreela\DevFreela.API\bin\Debug\net6.0\FluentValidation.dll
+C:\PROJETOS\ASP.NET Core\DevFreela\DevFreela.API\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
+C:\PROJETOS\ASP.NET Core\DevFreela\DevFreela.API\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll

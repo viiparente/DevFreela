@@ -59,11 +59,20 @@ namespace DevFreela.API.Controllers
         [HttpPost]
         public async Task<IActionResult> Post([FromBody] CreateProjectCommand command)
         {
-            if (command.Title.Length > 50)
-            {
-                return BadRequest();
-            }
+            //if (command.Title.Length > 50)
+            //{
+            //    return BadRequest();
+            //}
 
+            if (!ModelState.IsValid)
+            {
+                var messages = ModelState
+                    .SelectMany(ms => ms.Value.Errors)
+                    .Select(x => x.ErrorMessage)
+                    .ToList();
+
+                return BadRequest(messages);
+            }
             // Cadastrar o projeto
             //var id = _projectService.Create(inputModel);
             var id = await _mediator.Send(command);
@@ -77,13 +86,19 @@ namespace DevFreela.API.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> Put(int id, [FromBody] UpdateProjectCommand command)
         {
-            if (command.Description.Length > 200)
+            if (!ModelState.IsValid)
             {
-                return BadRequest();
+                var messages = ModelState
+                    .SelectMany(ms => ms.Value.Errors)
+                    .Select(x => x.ErrorMessage)
+                    .ToList();
+
+                return BadRequest(messages);
             }
+
+            // Atualizo o objeto
             await _mediator.Send(command);
             //_projectService.Update(command);
-            // Atualizo o objeto
 
             return NoContent();
         }
@@ -106,9 +121,18 @@ namespace DevFreela.API.Controllers
         [HttpPost("{id}/comments")]
         public async Task<IActionResult> PostComment(int id, [FromBody] CreateCommentCommand command)
         {
-            //_projectService.CreateComment(command);
+            if (!ModelState.IsValid)
+            {
+                var messages = ModelState
+                    .SelectMany(ms => ms.Value.Errors)
+                    .Select(x => x.ErrorMessage)
+                    .ToList();
+
+                return BadRequest(messages);
+            }
             await _mediator.Send(command);  
 
+            //_projectService.CreateComment(command);
             return NoContent();
         }
 
