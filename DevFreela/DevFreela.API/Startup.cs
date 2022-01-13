@@ -47,7 +47,7 @@ namespace DevFreela.API
 
             //Uma instância por Classe
             //services.AddTransient<ExampleClass>(e => new ExampleClass { Name = "Initial Stag" });
-
+                
             services.AddScoped<IProjectRepository, ProjectRepository>();
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<ISkillRepository, SkillRepository>();
