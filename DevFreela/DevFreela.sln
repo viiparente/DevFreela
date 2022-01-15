@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevFreela.Core", "DevFreela
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevFreela.Infrastructure", "DevFreela.Infrastructure\DevFreela.Infrastructure.csproj", "{76848980-729E-461E-B381-BB9B292451CC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevFreela.Application", "DevFreela.Application\DevFreela.Application.csproj", "{0C25D0D2-4F73-4B66-89AF-E97467FBB0A7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevFreela.Application", "DevFreela.Application\DevFreela.Application.csproj", "{0C25D0D2-4F73-4B66-89AF-E97467FBB0A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevFreela.UnitTests", "DevFreela.UnitTests\DevFreela.UnitTests.csproj", "{F6F3677F-8A64-4C1A-88CB-85ECBF5A5D3B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,14 @@ Global
 		{0C25D0D2-4F73-4B66-89AF-E97467FBB0A7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0C25D0D2-4F73-4B66-89AF-E97467FBB0A7}.Release|x86.ActiveCfg = Release|Any CPU
 		{0C25D0D2-4F73-4B66-89AF-E97467FBB0A7}.Release|x86.Build.0 = Release|Any CPU
+		{F6F3677F-8A64-4C1A-88CB-85ECBF5A5D3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6F3677F-8A64-4C1A-88CB-85ECBF5A5D3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6F3677F-8A64-4C1A-88CB-85ECBF5A5D3B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F6F3677F-8A64-4C1A-88CB-85ECBF5A5D3B}.Debug|x86.Build.0 = Debug|Any CPU
+		{F6F3677F-8A64-4C1A-88CB-85ECBF5A5D3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6F3677F-8A64-4C1A-88CB-85ECBF5A5D3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6F3677F-8A64-4C1A-88CB-85ECBF5A5D3B}.Release|x86.ActiveCfg = Release|Any CPU
+		{F6F3677F-8A64-4C1A-88CB-85ECBF5A5D3B}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
