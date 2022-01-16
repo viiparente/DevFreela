@@ -23,6 +23,8 @@ namespace DevFreela.Application.Queries.GetAllProjects
                 .ToList();
 
             return projectsViewModel;
+            //return new List<ProjectViewModel>();
+
         }
     }
 }

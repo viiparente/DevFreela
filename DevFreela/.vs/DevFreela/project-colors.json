@@ -25,7 +25,12 @@
       "ProjectGuid": "0c25d0d2-4f73-4b66-89af-e97467fbb0a7",
       "DisplayName": "DevFreela.Application",
       "ColorIndex": 3
+    },
+    "f6f3677f-8a64-4c1a-88cb-85ecbf5a5d3b": {
+      "ProjectGuid": "f6f3677f-8a64-4c1a-88cb-85ecbf5a5d3b",
+      "DisplayName": "DevFreela.UnitTests",
+      "ColorIndex": 4
     }
   },
-  "NextColorIndex": 4
+  "NextColorIndex": 5
 }
