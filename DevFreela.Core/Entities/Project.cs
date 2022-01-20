@@ -55,11 +55,15 @@ namespace DevFreela.Core.Entities
             {
                 Status = ProjectStatusEnum.Finished;
                 FinishedAt = DateTime.Now;
-
             }
 
         }
 
+        public void SetPaymentPending()
+        {
+            Status = ProjectStatusEnum.PaymentPending;
+            FinishedAt = null;
+        }
         public void Update(string title, string description, decimal totalCost) //Method temporary, when the entity framework core is deployed it will disappear
         {
             Title = title;
