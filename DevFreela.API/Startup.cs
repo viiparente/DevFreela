@@ -1,9 +1,11 @@
-﻿using DevFreela.API.Filters;
+﻿using DevFreela.API.Extensions;
+using DevFreela.API.Filters;
 using DevFreela.Application.Commands.CreateProject;
 using DevFreela.Application.Validators;
 using DevFreela.Core.Repositories;
 using DevFreela.Core.Services;
 using DevFreela.Infrastructure.Auth;
+using DevFreela.Infrastructure.MessageBus;
 using DevFreela.Infrastructure.Payments;
 using DevFreela.Infrastructure.Persistence;
 using DevFreela.Infrastructure.Persistence.Repositories;
@@ -29,34 +31,14 @@ namespace DevFreela.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //services.Configure<OpeningTimeOption>(Configuration.GetSection("OpeningTime"));
-
             // var connectionString = Configuration.GetConnectionString(Configuration.GetConnectionString("DevFreelaCs")) ;
             var connectionString = Configuration["ConnectionStrings:DevFreelaCs"];
             services.AddDbContext<DevFreelaDbContext>(options => options.UseSqlServer(connectionString));
             //services.AddDbContext<DevFreelaDbContext>(options => options.UseInMemoryDatabase("Devfreela"));
 
-            //services.AddSingleton<DevFreelaDbContext>();
-
-            //services.AddScoped<IProjectService, ProjectService>();
-            //services.AddScoped<IUserService, UserService>();
-            //services.AddScoped<ISkillService, SkillService>();
-
-
-            //Uma instância por aplicação
-            //services.AddSingleton<ExampleClass>(e => new ExampleClass { Name = "Initial Stag"});
-
-            //Uma instância por Requisição
-            //services.AddScoped<ExampleClass>(e => new ExampleClass { Name = "Initial Stag" });
-
-            //Uma instância por Classe
-            //services.AddTransient<ExampleClass>(e => new ExampleClass { Name = "Initial Stag" });
             services.AddHttpClient();
-            services.AddScoped<IProjectRepository, ProjectRepository>();
-            services.AddScoped<IUserRepository, UserRepository>();
-            services.AddScoped<ISkillRepository, SkillRepository>();
-            services.AddScoped<IAuthService, AuthService>();
-            services.AddScoped<IPaymentService, PaymentService>();
+
+            services.AddInfrastructure();
 
             services.AddControllers(options => options.Filters.Add(typeof(ValidationFilter)))
                 .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<CreateUserCommandValidator>());  
