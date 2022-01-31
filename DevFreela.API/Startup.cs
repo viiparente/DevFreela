@@ -1,14 +1,9 @@
 ﻿using DevFreela.API.Extensions;
 using DevFreela.API.Filters;
 using DevFreela.Application.Commands.CreateProject;
+using DevFreela.Application.Consumers;
 using DevFreela.Application.Validators;
-using DevFreela.Core.Repositories;
-using DevFreela.Core.Services;
-using DevFreela.Infrastructure.Auth;
-using DevFreela.Infrastructure.MessageBus;
-using DevFreela.Infrastructure.Payments;
 using DevFreela.Infrastructure.Persistence;
-using DevFreela.Infrastructure.Persistence.Repositories;
 using FluentValidation.AspNetCore;
 using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -35,6 +30,8 @@ namespace DevFreela.API
             var connectionString = Configuration["ConnectionStrings:DevFreelaCs"];
             services.AddDbContext<DevFreelaDbContext>(options => options.UseSqlServer(connectionString));
             //services.AddDbContext<DevFreelaDbContext>(options => options.UseInMemoryDatabase("Devfreela"));
+            
+            services.AddHostedService<PaymentApprovedConsumer>();
 
             services.AddHttpClient();
 
