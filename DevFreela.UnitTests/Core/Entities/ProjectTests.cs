@@ -1,10 +1,5 @@
 ﻿using DevFreela.Core.Entities;
 using DevFreela.Core.Enums;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xunit;
 
 namespace DevFreela.UnitTests.Core.Entities

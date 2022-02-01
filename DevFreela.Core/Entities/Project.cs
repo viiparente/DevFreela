@@ -21,16 +21,15 @@ namespace DevFreela.Core.Entities
         public string Title { get; private set; }
         public string Description { get; private set; }
         public int IdClient { get; private set; }
-        public User Client { get; set; }
+        public User Client { get; private set; }
         public int IdFreelancer { get; private set; }
-        public User Freelancer { get; set; }
+        public User Freelancer { get; private set; }
         public decimal TotalCost { get; private set; }
         public DateTime CreatedAt { get; private set; }
         public DateTime? StartedAt { get; private set; }
         public DateTime? FinishedAt { get; private set; }
         public ProjectStatusEnum Status { get; private set; }
         public List<ProjectComment> Comments { get; private set; }
-
 
         public void Start()
         {
@@ -43,10 +42,8 @@ namespace DevFreela.Core.Entities
 
         public void Cancel()
         {
-            if (Status == ProjectStatusEnum.InProgress || Status == ProjectStatusEnum.InProgress)
-            {
+            if (Status == ProjectStatusEnum.InProgress)
                 Status = ProjectStatusEnum.Cancelled;
-            }
         }
 
         public void Finish()
@@ -64,11 +61,11 @@ namespace DevFreela.Core.Entities
             Status = ProjectStatusEnum.PaymentPending;
             FinishedAt = null;
         }
-        public void Update(string title, string description, decimal totalCost) //Method temporary, when the entity framework core is deployed it will disappear
+        public void Update(string title, string description, decimal totalCost) 
         {
             Title = title;
             Description = description;
-            TotalCost = totalCost; 
+            TotalCost = totalCost;
         }
     }
 }

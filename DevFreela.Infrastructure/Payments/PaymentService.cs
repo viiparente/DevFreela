@@ -1,7 +1,5 @@
 ﻿using DevFreela.Core.DTOs;
 using DevFreela.Core.Services;
-using Microsoft.Extensions.Configuration;
-using System.Net.Http;
 using System.Text;
 using System.Text.Json;
 

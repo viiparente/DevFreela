@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DevFreela.Core.Entities
+﻿namespace DevFreela.Core.Entities
 {
     public class UserSkill : BaseEntity
     {
@@ -18,6 +12,6 @@ namespace DevFreela.Core.Entities
 
         public int IdSkill { get; private set; }
 
-        public Skill Skill { get; set; }
+        public Skill Skill { get; private set; }
     }
 }

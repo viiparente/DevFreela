@@ -2,11 +2,6 @@
 using DevFreela.Core.Repositories;
 using DevFreela.Core.Services;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DevFreela.Application.Commands.LoginUser
 {
@@ -31,9 +26,8 @@ namespace DevFreela.Application.Commands.LoginUser
 
             // Se nao existir, erro no login
             if (user == null)
-            {
                 return null;
-            }
+
 
             // Se existir, gero o token usando os dados do usuário
             var token = _authService.GenerateJwtToken(user.Email, user.Role);

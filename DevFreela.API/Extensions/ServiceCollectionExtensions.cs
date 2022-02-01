@@ -4,7 +4,6 @@ using DevFreela.Infrastructure.Auth;
 using DevFreela.Infrastructure.MessageBus;
 using DevFreela.Infrastructure.Payments;
 using DevFreela.Infrastructure.Persistence.Repositories;
-using Microsoft.Extensions.DependencyInjection;
 
 namespace DevFreela.API.Extensions
 {

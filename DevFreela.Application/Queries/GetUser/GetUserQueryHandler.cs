@@ -10,11 +10,6 @@ namespace DevFreela.Application.Queries.GetUser
 {
     public class GetUserQueryHandler : IRequestHandler<GetUserQuery, UserViewModel>
     {
-        //private readonly DevFreelaDbContext _dbContext;
-        //public GetUserQueryHandler(DevFreelaDbContext dbContext)
-        //{
-        //    _dbContext = dbContext;
-        //}
         private readonly IUserRepository _userRepository;
         public GetUserQueryHandler(IUserRepository userRepository)
         {
@@ -22,13 +17,10 @@ namespace DevFreela.Application.Queries.GetUser
         }
         public async Task<UserViewModel> Handle(GetUserQuery request, CancellationToken cancellationToken)
         {
-            //var user = await _dbContext.Users.SingleOrDefaultAsync(u => u.Id == request.Id);
             var user = await _userRepository.GetByIdAsync(request.Id);
 
             if (user == null)
-            {
                 return null;
-            }
 
             return new UserViewModel(user.FullName, user.Email);
         }

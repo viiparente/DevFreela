@@ -16,13 +16,10 @@ namespace DevFreela.Application.Queries.GetProjectById
 
         public async Task<ProjectDetailsViewModel> Handle(GetProjectByIdQuery request, CancellationToken cancellationToken)
         {
-            //var project = await _dbContext.Projects
-            //    .Include(p => p.Client)
-            //    .Include(p => p.Freelancer)
-            //    .SingleOrDefaultAsync(p => p.Id == request.Id);
             var project = await _projectRepository.GetDetailsByIdAsync(request.Id);
 
-            if (project == null) return null;
+            if (project == null) 
+                return null;
 
             var projectDetailsViewModel = new ProjectDetailsViewModel(
                 project.Id,
