@@ -1,3 +1,4 @@
+![example workflow](https://github.com/viiparente/DevFreela/actions/workflows/dotnet.yml/badge.svg)
 # DevFreela
 DevFreela é uma aplicação construída na plataforma .NET com o objetivo de possibilitar clientes a contratarem desenvolvedores freelancers para o desenvolvimento de projetos com base nas habilidades profissionais do desenvolvedor, sendo possível também enviar comentários a respeito do projeto, tanto como freelancer quanto como cliente.
 
